@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/register.js"></script>
+</head>
+<body>
+<div>
+    <img src="../../img/logo_nav.png" style="position:absolute;height: 100px;width: 100px;left: 450px;top: 5px" alt="">
+    <h1>Sign up for an artist!</h1>
+    <table>
+        <tr>
+            <td>Username:</td>
+            <td><input type="text" id="username" required onblur="checkUsername()"></td>
+            <td id="checkUsername" class="check"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" id="password" onblur="checkPassword()" onKeyUp="pwStrength(this.value)" required>
+            </td>
+            <td id="checkPassword" class="check"></td>
+        </tr>
+        <tr>
+            <td>Password Strength:</td>
+            <td>
+                <span id="strength_L" class="strength">Weak</span>
+                <span id="strength_M" class="strength">Medium</span>
+                <span id="strength_H" class="strength">Strong</span>
+            </td>
+        </tr>
+        <tr>
+            <td>Confirm your password again:</td>
+            <td><input type="password" id="rePassword" required onblur="checkAgainPassword()"></td>
+            <td id="checkAgainPassword" class="check"></td>
+        </tr>
+        <tr>
+            <td>e-mail:</td>
+            <td><input type="email" id="email" required onblur="checkEmail()"></td>
+            <td id="checkEmail" class="check"></td>
+        </tr>
+        <tr>
+            <td>phoneNumber:</td>
+            <td><input type="tel" id="phoneNumber" required onblur="checkPhoneNumber()"></td>
+            <td id="checkPhoneNumber" class="check"></td>
+        </tr>
+        <tr>
+            <td>address:</td>
+            <td><input type="text" id="address" onblur="checkAddress()"></td>
+            <td id="checkAddress" class="check"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="submit" onclick="register()"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

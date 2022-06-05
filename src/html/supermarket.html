@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的购物车</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/Supermarket.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/particles.js"></script>
+</head>
+<body>
+<nav>
+    <ul id="nav">
+        <li id="logo">
+            <a href="HomePage.html"><img src="../../img/logo.png" alt=""></a>
+        </li>
+        <li id="website">ART STORE</li>
+        <li id="slogan">Welcome to the world of ART!</li>
+        <li class="this"><a href="HomePage.html">首页</a></li>
+        <li><a href="Search.html">搜索</a></li>
+        <li id="details"><a>商品详情</a></li>
+        <li id="account">My&nbsp; Account&nbsp;
+            <br>
+            <ul id="dropdown">
+                <li onclick="alert('你好！'+sessionStorage.getItem('username'))">用户名</li>
+                <li>
+                    <a href="Center.html">个人中心</a>
+                </li>
+                <li>
+                    <a href="supermarket.html" style="color: red;">购物车</a>
+                </li>
+                <li>
+                    <a href="Upload.html">发布艺术品</a>
+                </li>
+                <li>
+                    <a href="HomePage.html" onclick="logout()">退出登录</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div id="footprint">
+    您的足迹：
+    <span id="foot_print"></span>
+</div>
+<div class="main">
+    <div class="title">My Shopping Cart</div>
+    <ul id="cart">
+    </ul>
+</div>
+<button type="submit" onclick="settle()" id="total">
+    <img src="../../img/favourite.png" alt="">总共$190
+</button>
+<footer>
+    Copyright&#169;20302010006 洪怿立
+</footer>
+</body>
+
+
+</html>

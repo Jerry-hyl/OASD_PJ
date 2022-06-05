@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/Upload.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/upload.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/particles.js"></script>
+</head>
+
+<body onload="loadData()">
+<nav>
+    <ul id="nav">
+        <li id="logo">
+            <a href="HomePage.html"><img src="../../img/logo.png" alt=""></a>
+        </li>
+        <li id="website">ART STORE</li>
+        <li id="slogan">Welcome to the world of ART!</li>
+        <li class="this"><a href="HomePage.html">首页</a></li>
+        <li><a href="Search.html">搜索</a></li>
+        <li id="details"><a>商品详情</a></li>
+        <li id="account">My&nbsp; Account&nbsp;
+            <br>
+            <ul id="dropdown">
+                <li onclick="alert('您好！'+sessionStorage.getItem('username'))">用户名</li>
+                <li>
+                    <a href="Center.html">个人中心</a>
+                </li>
+                <li>
+                    <a href="supermarket.html">购物车</a>
+                </li>
+                <li>
+                    <a href="Upload.html" style="color: red;">发布艺术品</a>
+                </li>
+                <li>
+                    <a href="HomePage.html" onclick="sessionStorage.clear()">退出登录</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div id="footprint">
+    您的足迹：
+    <span id="foot_print">主页→个人页面→主页</span>
+</div>
+<div id="main">
+    <div id="title">Upload</div>
+    <div>
+        <img id="img0">
+        <span class="fileinput-button">
+        <button id="button">上传(暂未上传）</button>
+        <input type="file" name="file0" id="file0" accept="image/gif,image/jpeg,image/jpg,image/png,image/svg"/>
+        <script src="../js/upload.js">
+        </script>
+        </span>
+    </div>
+    <br><br><br><br><br><br>
+    <div>艺术品名称：</div>
+    <input type="text" class="detail_input" id="art_name">
+    <br>
+    <table>
+        <tr>
+            <td>艺术品作者：</td>
+            <td>年份：</td>
+            <td>流派:</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="author"></td>
+            <td><input type="number" id="year" onchange="checkLength('year')"></td>
+            <td>
+                <select id="style">
+                    <option value="1">Cubism</option>
+                    <option value="33">Romanticism</option>
+                    <option value="34">Realism</option>
+                    <option value="35">Impressionism</option>
+                    <option value="36">Post-Impressionism</option>
+                    <option value="40">Fauvism</option>
+                    <option value="47">Surrealism</option>
+                    <option value="56">Expressionism</option>
+                    <option value="64">Symbolism</option>
+                    <option value="76">Neoclassicism</option>
+                    <option value="77">Northern Renaissance</option>
+                    <option value="78">Renaissance</option>
+                    <option value="79">High Renaissance</option>
+                    <option value="80">Mannerism</option>
+                    <option value="81">International Gothic</option>
+                    <option value="83">Rococo</option>
+                    <option value="84">Baroque</option>
+                    <option value="87">Dutch Golden Age</option>
+                    <option value="88">Academic Art</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>高度：</td>
+            <td>宽度：</td>
+            <td>价格:</td>
+        </tr>
+        <tr>
+            <td><input type="number" id="length" step="any" onchange="checkLength('length')"></td>
+            <td><input type="number" id="width" step="any" onchange="checkLength('width')"></td>
+            <td><input type="number" id="price" onchange="checkLength('price')"></td>
+        </tr>
+    </table>
+    <div>艺术品简介：</div>
+    <textarea name="detail" id="detail" cols="30" rows="3" class="detail_input"></textarea>
+    <button type="submit" onclick="upload()">submit</button>
+</div>
+
+<footer>
+    Copyright&#169;20302010006 洪怿立
+</footer>
+</body>
+
+</html>

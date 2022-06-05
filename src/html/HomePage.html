@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/Homepage.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/HotImage.js"></script>
+    <script src="../js/particles.js"></script>
+</head>
+<body onload="load()">
+    <div id="main">
+        <nav>
+            <ul id="nav">
+                <li id="logo">
+                    <a href="HomePage.html"><img src="../../img/logo.png" alt=""></a>
+                </li>
+                <li id="website">ART STORE</li>
+                <li id="slogan">Welcome to the world of ART!</li>
+                <li class="this"><a href="HomePage.html">首页</a></li>
+                <li><a href="Search.html">搜索</a></li>
+                <li id="details"><a>商品详情</a></li>
+                <li id="account">My&nbsp; Account&nbsp;
+                    <br>
+                    <ul id="dropdown">
+                        <li onclick="alert('您好！'+sessionStorage.getItem('username'))">用户名</li>
+                        <li>
+                            <a href="Center.html">个人中心</a>
+                        </li>
+                        <li>
+                            <a href="supermarket.html">购物车</a>
+                        </li>
+                        <li>
+                            <a href="Upload.html">发布艺术品</a>
+                        </li>
+                        <li>
+                            <a href="HomePage.html" onclick="sessionStorage.clear()">退出登录</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="slidershow middle">
+
+            <div class="slides">
+
+                <input type="radio" name="r" id="r1">
+                <input type="radio" name="r" id="r2">
+                <input type="radio" name="r" id="r3">
+                <input type="radio" name="r" id="r4">
+
+                <div class="slide s1">
+                    <img src="../../img/showImages/1.jpg" alt="photo">
+                </div>
+
+                <div class="slide">
+                    <img src="../../img/showImages/2.jpg" alt="photo">
+                </div>
+
+                <div class="slide">
+                    <img src="../../img/showImages/3.jpg" alt="photo">
+                </div>
+                <div class="slide">
+                    <img src="../../img/showImages/4.jpg" alt="photo">
+                </div>
+            </div>
+
+            <div class="navigation">
+                <label for="r1" class="bar"></label>
+                <!-- label标签为 input 元素定义标注  "for"属性可把label绑定到另外一个元素。请把 "for" 属性的值设置为相关元素的 id 属性的值。 -->
+                <label for="r2" class="bar"></label>
+                <label for="r3" class="bar"></label>
+                <label for="r4" class="bar"></label>
+            </div>
+
+        </div>
+        <br>
+        <div class="area">HOT ARTWORK!</div>
+        <div class="hot_image_area" id="hotImage">
+        </div>
+        <div class="area">NEWEST RELEASE!</div>
+        <div class="hot_image_area" id="new_release">
+        </div>
+    </div>
+
+    <div class="float_button">
+        <a href="#nav"><img src="../../img/back_to_top.png" title="回到顶部" id="back_to_top" class="back_to_top" alt=""></a>
+    </div>
+    <div id="footer">
+        <br>
+        <div id="footer_left">
+            Copyright&#169;号20302010006 洪怿立
+        </div>
+    </div>
+</body>
+
+</html>

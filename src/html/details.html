@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/Comment.css">
+    <link rel="stylesheet" href="../css/details.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/detail.js"></script>
+    <script src="../js/magnify.js"></script>
+</head>
+
+<body onload="getData();init()">
+    <nav>
+        <!-- 导航栏 -->
+        <ul id="nav">
+            <li id="logo">
+                <a><img src="../../img/logo.png" alt=""></a>
+            </li>
+            <li id="website">ART STORE</li>
+            <li id="slogan">Welcome to the world of ART!</li>
+            <li><a>首页</a></li>
+            <li><a>搜索</a></li>
+            <li id="details"><a style="color: purple;">商品详情</a></li>
+        </ul>
+    </nav>
+    <div id="main">
+        <h2 id="title">山清水秀&nbsp;<span id="author">by zyz</span></h2>
+        <div id="info">
+            <!-- 左图右信息 -->
+            <div class="half" id="magnifier">
+                <img id="img" src="../../img/showImages/3.jpg" alt="">
+                <div id="Browser"></div>
+            </div>
+            <div id="mag">
+                <img id="magnifierImg" />
+            </div>
+            <div class="half">
+                <table class="main">
+                    <tr class="title"><td colspan="2">About the Artwork</td></tr>
+                    <tr class="detail">
+                        <td>Price:</td>
+                        <td class="information" id="Cost">$10000</td>
+                    </tr>
+                    <tr class="detail">
+                        <td>Visits:</td>
+                        <td class="information" id="visit">2500</td>
+                    </tr>
+                    <tr class="detail">
+                        <td>Sold:</td>
+                        <td class="information" id="status">FALSE</td>
+                    </tr>
+                    <tr class="detail">
+                        <td>Release Date:</td>
+                        <td class="information" id="release_date">None</td>
+                    </tr>
+                    <tr class="detail">
+                        <td>Release User:</td>
+                        <td class="information" id="release">Nobody</td>
+                    </tr>
+                </table>
+                <table class="main">
+                    <tr class="title"><td colspan="2" >Product Details</td></tr>
+                    <tr class="detail">
+                        <td>YEAR:</td>
+                        <td class="information" id="year">1901</td>
+                    </tr>
+                    <tr class="detail">
+                        <td>SIZE</td>
+                        <td class="information" id="size">18*19</td>
+                    </tr>
+                    <tr class="detail">
+                        <td>ERA</td>
+                        <td class="information" id="era">19th centuries</td>
+                    </tr>
+                    <tr class="detail_last">
+                        <td>STYLE:</td>
+                        <td class="information" id="style">Classical</td>
+                    </tr>
+                </table>
+                <button id="collect" value="" onclick="addToCart()">
+                    <img id="collect_img" src="../../img/collect.png" alt="">加入购物车</button>
+            </div>
+        </div>
+        <div class="introduction">
+            Welcome to the Fundamentals of Web Development. This textbook is intended to cover the broad range of topics required for modem web development and is suitable for intermediate to upper—level computing students. A significant pefcent— age of the material
+            in this book has also been used by the authors to teach web development principles to first—year computing students and to non—computing students as well.
+        </div>
+        <div class="comment_box">
+            <h1>Comment Area</h1>
+            <br>
+            <section class="comments" id="comment_area">
+                <article class="comment">
+                    <a class="comment-img">
+                        <img src="../../img/filter.jpg" alt="" width="50" height="50">
+                    </a>
+                    <div class="comment-body">
+                        <div class="text">
+                            <label>
+                                Rating:&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="number" class="topic" id="rate">
+                            </label>
+                            <br><br>
+                            <label>
+                                Content:
+                                <textarea class="content" rows="3" cols="30" id="content"></textarea>
+                            </label>
+                        </div>
+                        <br>
+                        <button onclick="comment()">Submit</button>
+                    </div>
+                </article>
+                <article class="comment">
+                    <a class="comment-img">
+                        <img src="../../img/filter.jpg" alt="" width="50" height="50">
+                    </a>
+                    <div class="comment-body">
+                        <div class="text">
+                            <h1 class="like">Like:10</h1>
+                            <p>Hello, this is an example comment</p>
+                            <p>It has multiple paragraphs and is full of waffle to pad out the comment.
+                                Usually, you just wish these sorts of comments would come to an end.</p>
+                        </div>
+                        <p class="attribution">by <a href="#non">Joe Bloggs</a> at 14:23pm, 4th Dec 2010</p>
+                        <button>Like&nbsp;+1</button>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <a href="#comment_area"><img src="../../img/back_to_top.png" title="发布评论" id="back_to_top" alt=""></a>
+    <footer>
+        Copyright&#169;20302010006 洪怿立
+    </footer>
+</body>
+
+</html>

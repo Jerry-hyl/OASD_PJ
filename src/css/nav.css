@@ -1,0 +1,136 @@
+#nav {
+    background-color: grey;
+    width: 100%;
+    min-width: 600px;
+    height: 5em;
+    font-size: 1.2em;
+    z-index: 1000000;
+}
+
+#nav #website {
+    font-size: 40px;
+    margin-top: 25px;
+    color: yellow;
+    background-color: grey;
+}
+#nav img {
+    height: 3em;
+    width: 3em;
+    margin-top: -1em;
+    background-color: grey;
+}
+
+#nav #slogan {
+    color: blue;
+    background-color: grey;
+    text-shadow: 2px 2px 4px;
+    font-size: 15px;
+    margin-top: 50px;
+    margin-left: -15px;
+}
+#nav li:not(#details,#website,#slogan):hover{
+    background-color: dimgray;
+}
+
+
+#nav li {
+    float: left;
+    padding-left: 20px;
+    padding-right: 25px;
+    /*color: black;*/
+    margin-top: 35px;
+    height: 1.5em;
+    text-align: center;
+    transition: .8s;
+    align-items: center;
+}
+
+#nav li#logo {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#nav #account {
+    float: right;
+    padding-right: 30px;
+    cursor: pointer;
+    clear: right;
+    color: white;
+}
+
+#nav #account:hover {
+    float: right;
+    color: yellow;
+}
+
+#account:hover #dropdown {
+    margin-top: 8px;
+    position: absolute;
+    display: block;
+    /* 下拉显示 */
+    margin-right: 0px;
+    z-index: 1000;
+    float: right;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+}
+
+#nav ul#dropdown {
+    border: 1px grey solid;
+    border-radius: 10px;
+    display: none;
+    /* 平时隐藏 */
+}
+
+#nav ul#dropdown li {
+    display: block;
+    color: black;
+    float: none;
+    text-align: center;
+    font-size: 15px;
+    background-color: white;
+    transition: .8s;
+    margin-top: -2px;
+}
+
+#nav ul#dropdown li:hover {
+    background-color: rgba(125, 147, 243, 0.342);
+    border: 1px grey solid;
+    font-weight: bolder;
+    color: white;
+}
+
+#nav ul#dropdown li:hover a {
+    color: white;
+}
+
+#nav ul#dropdown li:hover img {
+    filter: invert(100%);
+    /* 反色 */
+}
+
+#nav ul#dropdown img {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+}
+
+#dropdown a {
+    color: black;
+    transition: .8s;
+}
+
+#footprint{
+    margin-top: 10px;
+    margin-left: 40px;
+    font-size: 14px;
+}
+#footprint a{
+    color: #4D2E7D;
+    text-decoration: underline;
+}
+#footprint a:hover{
+    cursor: pointer;
+}
+input[type="button"]:hover{
+    cursor: pointer;
+}

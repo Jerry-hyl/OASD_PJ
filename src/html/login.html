@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/particles.js"></script>
+</head>
+<body onload="canvas()">
+<a href="HomePage.html"><img src="../../img/back_to_top.png" alt=""></a>
+<div class="box">
+    <h2>Login</h2>
+    <form action="" method="post">
+        <div class="inputBox">
+            <input type="text" id="name" required onblur="checkName()" autocomplete="off">
+            <label>Username or E-mail</label>
+        </div>
+        <div class="inputBox">
+            <input type="password" id="password" required onblur="checkPassword()">
+            <label>password</label>
+        </div>
+<!--        <span>密码不能为空</span>-->
+        <div class="inputBox">
+            <input type="text" id="checkNumber" required autocomplete="off">
+            <label>checkNumber</label>
+        </div>
+        <img src="../php/checkNumber.php" id="checkNumberPic" onclick="update()" title="Click to change!"><br>
+        <input type="button" value="submit" onclick="login()">
+        <input type="button" id="button2" value="Register" onclick="window.location.href='register.html'">
+    </form>
+</div>
+</body>
+</html>

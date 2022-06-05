@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/Center.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/center.js"></script>
+    <script src="../js/particles.js"></script>
+</head>
+<body onload="load()">
+<nav>
+<ul id="nav">
+    <li id="logo">
+        <a href="HomePage.html"><img src="../../img/logo.png" alt=""></a>
+    </li>
+    <li id="website">ART STORE</li>
+    <li id="slogan">Welcome to the world of ART!</li>
+    <li class="this"><a href="HomePage.html">首页</a></li>
+    <li><a href="Search.html">搜索</a></li>
+    <li id="details"><a>商品详情</a></li>
+    <li id="account">My&nbsp; Account&nbsp;
+        <br>
+        <ul id="dropdown">
+            <li onclick="alert('您好！'+sessionStorage.getItem('username'))">用户名</li>
+            <li>
+                <a href="Center.html" style="color: red;">个人中心</a>
+            </li>
+            <li>
+                <a href="supermarket.html">购物车</a>
+            </li>
+            <li>
+                <a href="Upload.html">发布艺术品</a>
+            </li>
+            <li>
+                <a href="HomePage.html" onclick="sessionStorage.clear()">退出登录</a>
+            </li>
+        </ul>
+    </li>
+</ul>
+</nav>
+<div id="footprint">
+    您的足迹：
+    <span id="foot_print"></span>
+</div>
+<table id="information">
+    <tr>
+        <td>用户：</td>
+        <td id="username">jorry</td>
+    </tr>
+    <tr>
+        <td>电话:</td>
+        <td id="phone">18964518538</td>
+    </tr>
+    <tr>
+        <td>邮箱：</td>
+        <td id="email">jiali1106@qq.com</td>
+    </tr>
+    <tr>
+        <td>地址：</td>
+        <td id="address"></td>
+    </tr>
+    <tr>
+        <td>余额：</td>
+        <td id="balance"></td>
+    </tr>
+    <tr><td colspan="2"><input type="button" value="充值信仰" onclick="deposit()"></td></tr>
+</table>
+<div class="main">
+    <div class="title">我发布的艺术品</div>
+    <ul id="releaseObject">
+    </ul>
+</div>
+<div class="history">
+    <span>我购买的艺术品</span>
+    <table class="list" id="purchased">
+    </table>
+</div>
+<div class="main">
+    <div class="title">我卖出的艺术品</div>
+    <ul id="sold">
+    </ul>
+</div>
+
+<div class="popupBack" id='pop'>
+    <script>
+        document.getElementById('pop').style.display="none";
+    </script>
+    <div class="popup">
+        <div id="header">
+            <div id="header-right" onclick="hide('pop')">x</div>
+        </div>
+        <input type="text" id="money" placeholder="请输入充值金额（必须是整数）" onblur="check()">
+        <br>
+        <input type="submit" value="确认提交" onclick="submit()">
+    </div>
+</div>
+<div class="popupBack" id='process'>
+    <script>
+        document.getElementById('process').style.display="none";
+    </script>
+    <div class="popup">
+        <div id="progressBar">
+            <div>
+                <span></span>
+            </div>
+            <span>确认订单</span>
+            <span></span>
+            <span>待付款</span>
+            <span></span>
+            <span>代发货</span>
+            <span></span>
+            <span>运输中</span>
+            <span></span>
+            <span>确认送达</span>
+            <span></span>
+        </div>
+        <input type="submit" value="确认无误" id="confirm" onclick="confirmArrive()">
+    </div>
+</div>
+<footer>
+    Copyright&#169;20302010006 洪怿立
+</footer>
+</body>
+</html>

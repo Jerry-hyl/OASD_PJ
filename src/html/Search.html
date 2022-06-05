@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/particles.js"></script>
+</head>
+<body onload="loadSearch()">
+<nav>
+    <ul id="nav">
+        <li id="logo">
+            <a href="HomePage.html"><img src="../../img/logo.png" alt=""></a>
+        </li>
+        <li id="website">ART STORE</li>
+        <li id="slogan">Welcome to the world of ART!</li>
+        <li class="this"><a href="HomePage.html">首页</a></li>
+        <li><a href="Search.html" style="color: purple;">搜索</a></li>
+        <li id="details"><a>商品详情</a></li>
+        <li id="account">My&nbsp; Account&nbsp;
+            <br>
+            <ul id="dropdown">
+                <li onclick="alert('您好！'+sessionStorage.getItem('username'))">用户名</li>
+                <li>
+                    <a href="Center.html">个人中心</a>
+                </li>
+                <li>
+                    <a href="supermarket.html">购物车</a>
+                </li>
+                <li>
+                    <a href="Upload.html">发布艺术品</a>
+                </li>
+                <li>
+                    <a href="HomePage.html" onclick="sessionStorage.clear()">退出登录</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div id="footprint">
+    您的足迹：
+    <span id="foot_print"></span>
+</div>
+<div class="main">
+    <div class="title">Search</div>
+        <div id="rule">
+            排序顺序：
+            <select id="sort">
+            <option>名称</option>
+            <option>艺术品访问量</option>
+            <option>价格</option>
+            </select>
+        </div><br>
+        <input type="radio" name="filter_way" id="by_name" onclick="disabled_change_a()">Search by Name <br>
+        <input id="name" type="text" disabled><br><br>
+        <input type="radio" name="filter_way" id="by_author" onclick="disabled_change_b()">Search by Author
+        <br>
+        <input id="author" disabled><br><br>
+        <input id="submit" value="Search" onclick="$('#page').val('1');search_paintings()">
+</div>
+<div class="main ">
+    <div class="title ">Result</div>
+    <ul id="result">
+        <li class="pic ">
+            <a href="details.html"><img src="../../img/showImages/1.jpg " class="pic_pic " alt=" "></a>
+            <div class="pic_text ">
+                <h1>Death in the sickroom</h1><h3>By&nbsp;Tom</h3>
+                <br>
+                <p class="text ">
+                    The picture shows what we can assume to be the artist鈥檚 family grouped around his sister Sophie,
+                    who died in 1877. She is sitting in a chair with her back to us. To the right stands an aunt, Kar
+                    en Bj酶lstad, who moved in with the family to take care of the children and the household after
+                    the mother died of tuberculosis in 1868. In the background stands the father, the doctor Christian
+                    Munch, with his hands clasped as if in prayer. Near the centre of the picture is a male figure, pro
+                    bably Edvard, in quarter-face. Sister Laura is sitting in the foreground with her hands in her lap,
+                    while the third sister, Inger, stands staring straight at us. The male figure to the left is generally
+                    identified as Edvard鈥檚 younger brother Andreas. In Death in the SickRoom there is no physical contact
+                    between the people, except for the hand that aunt Karen has laid on the back of the chair in which the
+                    invalid sits.</p>
+                <br>
+                <button class="delete" disabled>Visits:67</button>
+                <button class="price" disabled>Price:$1236.0</button>
+            </div>
+        </li>
+        <li class="pic ">
+            <a href="details.html"><img src="../../img/showImages/1.jpg " class="pic_pic " alt=" "></a>
+            <div class="pic_text ">
+                <h2>
+                    title
+                </h2>
+                <br>
+                <p class="text ">
+                    Welcome to the Fundamentals of Web Development. This textbook is intended to cover the broad range
+                    of topics required for modem web development and is suitable for intermediate to upper—level
+                    computing students. A significant pefcent— age of the material
+                    in this book has also been used by the authors to teach web development principles to first—year
+                    computing students and to non—computing students as well.</p>
+                <br>
+            </div>
+        </li>
+        <li class="pic ">
+            <a href="details.html"><img src="../../img/showImages/1.jpg " class="pic_pic " alt=" "></a>
+            <div class="pic_text ">
+                <h2>
+                    title
+                </h2>
+                <br>
+                <p class="text ">
+                    Welcome to the Fundamentals of Web Development. This textbook is intended to cover the broad range
+                    of topics required for modem web development and is suitable for intermediate to upper—level
+                    computing students. A significant pefcent— age of the material
+                    in this book has also been used by the authors to teach web development principles to first—year
+                    computing students and to non—computing students as well.</p>
+                <br>
+            </div>
+
+        </li>
+        <li class="pic ">
+            <a href="details.html"><img src="../../img/showImages/1.jpg " class="pic_pic " alt=" "></a>
+            <div class="pic_text ">
+                <h2>
+                    title
+                </h2>
+                <br>
+                <p class="text ">
+                    Welcome to the Fundamentals of Web Development. This textbook is intended to cover the broad range
+                    of topics required for modem web development and is suitable for intermediate to upper—level
+                    computing students. A significant pefcent— age of the material
+                    in this book has also been used by the authors to teach web development principles to first—year
+                    computing students and to non—computing students as well.</p>
+                <br>
+            </div>
+
+        </li>
+    </ul>
+
+
+    <div id="page_number">
+        <span id="previous" onclick="change(-1)">《</span>
+        <span class="number" onclick="direct(this.innerText)">1</span>
+        <span class="number" onclick="direct(this.innerText)">2</span>
+        <span class="number" onclick="direct(this.innerText)">3</span>
+        <span class="number" onclick="direct(this.innerText)">4</span>
+        <span class="number" onclick="direct(this.innerText)">5</span>
+        <span id="next" onclick="change(1)">》</span>
+        <span>第</span>
+        <input type="number" style="width: 40px;height: 15px;" value="1" id="page" onchange="search_paintings()">
+        <span>页</span>
+        <span id="pages">/共1页</span>
+    </div>
+</div>
+
+<footer>
+    Copyright&#169;20302010006 洪怿立
+</footer>
+</body>
+
+
+</html>

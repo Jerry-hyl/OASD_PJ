@@ -1,0 +1,366 @@
+#information {
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-bottom: -170px;
+    background-color: #82A7E8;
+    border-radius: 5px;
+    width: 250px;
+}
+
+#information tr td:first-child{
+    width: 50px;
+}
+.main a{
+    cursor: pointer;
+}
+td a{
+    color: blue;
+    text-decoration: underline;
+}
+.buyerInformation{
+    color: purple;
+    margin-top: 4px;
+    margin-bottom: -5px;
+}
+.history{
+    background-color: #FFF8DC;
+    float: right;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#releaseDate{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.list{
+    border-collapse: collapse;
+}
+td a:hover{
+    cursor: pointer;
+}
+.list tr td{
+    border: 2px solid black;
+    border-radius: 2px;
+    height: 30px;
+    font-size: 12px;
+    width: 200px;
+}
+.list tr td+td{
+    width: 180px;
+}
+.list tr td+td+td{
+    width: 160px;
+}
+.list tr td+td+td+td{
+    width: 170px;
+}
+.list input[type="button"]{
+    margin-right: 40px;
+}
+.main {
+    margin-top: 30px;
+    margin-left: 300px;
+    border-radius: 5px;
+    border: 1px #DADADB solid;
+    min-width: 300px;
+}
+
+.title {
+    text-indent: 2ex;
+    margin-left: -1px;
+    margin-top: -1px;
+    width: 100%;
+    background: #F5F4F9;
+    border: 1px #DADADA solid;
+    border-radius: 5px;
+    color: #7D868A;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.pic {
+    display: inline-block;
+    width: 100%;
+    border: 1px #D3D2D5 solid;
+}
+
+.pic_pic {
+    height: 200px;
+    width: 250px;
+    margin: 20px;
+    padding: 0px;
+    display: inline-block;
+}
+
+.pic_text {
+    max-width: 40%;
+    margin-top: 20px;
+    display: inline-block;
+    position: absolute;
+    text-align: left;
+}
+
+.text {
+
+    text-indent: 2em;
+    color: #808080;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    /* 过长省略号代替 */
+    overflow: hidden;
+    font-size: 16px;
+    text-overflow: ellipsis;
+}
+
+.delete {
+    position: relative;
+    color: #C7464D;
+    background-color: #F8FAFB;
+    border: 1px #C8C8CA solid;
+    border-radius: 5px;
+    box-shadow: gray;
+    height: 40px;
+    font-size: 20px;
+    width: 80px;
+    margin-top: 5px;
+    font-weight: bolder;
+}
+
+#page_number,
+#page_number span{
+    color: #82A7E8;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    cursor: context-menu;
+}
+
+#page_number span {
+    margin-left: 10px;
+}
+
+#page_number span#active {
+    text-decoration: underline;
+}
+
+.modify {
+    margin-left: 20px;
+    position: relative;
+    color: #4D2E7D;
+    background-color: #F8FAFB;
+    border: 1px #C8C8CA solid;
+    border-radius: 5px;
+    box-shadow: gray;
+    height: 40px;
+    font-size: 20px;
+    width: 80px;
+    margin-top: 5px;
+    font-weight: bolder;
+}
+
+textarea {
+    resize: none;
+    /* 禁止改变大小 */
+}
+
+#title,
+#desc {
+    border: 1px #828284 solid;
+    border-radius: 5px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+form {
+    font-size: 20px;
+}
+
+input[type="radio"] {
+    margin-left: 10%;
+}
+
+input[type="radio"] {
+    content: '';
+    background: #f4f4f4;
+    border-radius: 100%;
+    border: 1px solid #b4b4b4;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    -webkit-transition: all 250ms ease;
+    transition: all 250ms ease;
+    /* 渐变时间 */
+}
+
+input[type="radio"]:checked {
+    background-color: #3197EE;
+    box-shadow: inset 0 0 0 4px #f4f4f4;
+    /* 向内阴影 */
+}
+
+input[type="radio"]:focus {
+    outline: none;
+    border-color: #3197EE;
+}
+
+input[type="submit"]{
+    text-align: center;
+    background-image: linear-gradient(#6CC967, #5BA14E);
+    box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.15);
+    border: 1px #4B8F4B solid;
+    border-radius: 3px;
+    height: 25px;
+    color: white;
+    width: 10%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+
+input[type="submit"]:hover {
+    background-image: linear-gradient(#5ba14e, #6cc967);
+}
+
+input,
+textarea {
+    font-size: 20px;
+}
+
+h2{
+    width: 70%;
+}
+
+#page_number a{
+    color: #82A7E8;
+}
+
+input[type="button"]{
+    float: right;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 30px;
+    margin-top: 60px;
+}
+
+.popupBack{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+}
+.popup{
+    position: relative;
+    background: burlywood;
+    width: 50%;
+    height: 80%;
+    border-radius: 5px;
+    margin: 5% auto;
+}
+#header{
+    height: 40px;
+}
+#header-right {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background: red;
+    color: #fff;
+    right: 5px;
+    top: 5px;
+    text-align: center;
+}
+#header-right:hover{
+    cursor: pointer;
+}
+.popup input[type="text"]{
+    width: 300px;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.popup input[type="submit"]{
+    width: 90px;
+    height: 30px;
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+#progressBar{
+    width: 80%;
+    height: 50px;
+    position: relative;
+    margin: 50px 0 0 100px;
+}
+#progressBar div{
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    top:50%;
+    left: 0;
+    margin-top:170px;
+    border:1px solid #ddd;
+    background: #ccc;
+    margin-left: -55px;
+}
+/*进度条长度*/
+#progressBar div span{
+    position: absolute;
+    display: inline-block;
+    background: green;
+    height: 10px;
+    width: 75%;
+}
+#progressBar>span:nth-child(2n){
+    position: absolute;
+    top:0;
+    margin-top: 190px;
+    width: 20px;
+    height: 20px;
+    border:2px solid #ddd;
+    border-radius: 50%;
+    background: green;
+    margin-left: -70px;
+    color:#fff;
+}
+
+/*各个关键节点*/
+#progressBar>span:nth-child(2){
+    left: 0%;
+    background-color: green;
+}
+#progressBar>span:nth-child(4){
+    left: 25%;
+    background:green;
+}
+#progressBar>span:nth-child(6){
+    left: 50%;
+    background:green;
+}
+#progressBar>span:nth-child(8){
+    left: 75%;
+    background:green;
+}
+#progressBar>span:nth-child(10) {
+    left: 100%;
+    background: #ccc;
+}
+.popup #confirm{
+    width: 90px;
+    height: 30px;
+    margin-top: 300px;
+    margin-left: 200px;
+}
